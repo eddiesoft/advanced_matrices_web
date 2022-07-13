@@ -7,7 +7,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "gendep": "yarn generate && yarn deploy"
   },
   "dependencies": {
     "core-js": "^3.19.3",

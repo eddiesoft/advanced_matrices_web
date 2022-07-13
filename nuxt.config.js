@@ -27,7 +27,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/png', href: '/advanced_matrices_web/favicon.png' },
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'
