@@ -2,7 +2,8 @@
   <v-row>
     <v-col class="text-center">
       <div class="my-xs-2 my-md-4 text-xs-h6 text-md-h5 font-weight-medium">
-        You answered {{ minus }} questions out of {{ iqScoreList.length }} correctly
+        You answered {{ minus }} questions out of
+        {{ iqScoreList.length }} correctly
       </div>
       <div class="my-xs-2 my-md-4 text-xs-h6 text-md-h5 font-weight-medium">
         Your IQ is {{ score }}
@@ -11,7 +12,13 @@
         {{ description }}
       </div>
       <div class="mt-6"></div>
-      <v-btn v-if="!isAllAnswersCorrect" color="error" elevation="2" text @click="clickMistakes()">
+      <v-btn
+        v-if="!isAllAnswersCorrect"
+        color="error"
+        elevation="2"
+        text
+        @click="clickMistakes()"
+      >
         Show Mistakes
       </v-btn>
     </v-col>
@@ -19,45 +26,45 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from "vuex";
 
 export default {
-  name: 'ResultPage',
+  name: "ResultPage",
   data() {
     return {
       minus: 0,
       score: 0,
       isAllAnswersCorrect: false,
-      description: '',
-    }
+      description: "",
+    };
   },
   computed: {
     ...mapGetters({
-      falseList: 'test/falseList',
-      correctAnswersList: 'test/correctAnswersList',
-      iqScoreList: 'test/iqScoreList',
-      wrongList: 'test/wrongList',
-      answersList: 'test/answersList',
+      falseList: "test/falseList",
+      correctAnswersList: "test/correctAnswersList",
+      iqScoreList: "test/iqScoreList",
+      wrongList: "test/wrongList",
+      answersList: "test/answersList",
     }),
   },
   created() {
     const answersListCopy = [...this.answersList];
     const falseListCopy = [...this.falseList];
 
-    let isEqual = answersListCopy.sort().toString() == falseListCopy.sort().toString();
+    let isEqual =
+      answersListCopy.sort().toString() == falseListCopy.sort().toString();
     if (isEqual) {
-      this.$router.push('/')
+      this.$router.push("/");
+    } else {
+      this.compareAnswers();
     }
-    else {
-      this.compareAnswers()
-    };
   },
   methods: {
     ...mapActions({
-      addAppropriate: 'test/addAppropriate',
-      addCorrect: 'test/addCorrect',
-      addWrong: 'test/addWrong',
-      clearAppCorWrongLists: 'test/clearAppCorWrongLists',
+      addAppropriate: "test/addAppropriate",
+      addCorrect: "test/addCorrect",
+      addWrong: "test/addWrong",
+      clearAppCorWrongLists: "test/clearAppCorWrongLists",
     }),
     clickMistakes() {
       this.$router.push("/mistakes");
@@ -76,18 +83,19 @@ export default {
       this.minus = this.iqScoreList.length - this.wrongList.length;
       this.score = this.iqScoreList[this.minus - 1];
       this.isAllAnswersCorrect = this.score == 136;
-      this.description = this.score < 86
-        ? 'Mild dementia'
-        : this.score < 90
-          ? 'Intellect below average'
+      this.description =
+        this.score < 86
+          ? "Mild dementia"
+          : this.score < 90
+          ? "Intellect below average"
           : this.score < 110
-            ? 'Average level of intelligence'
-            : this.score < 130
-              ? 'Intellect above average'
-              : 'High level of intelligence';
-    }
-  }
-}
+          ? "Average level of intelligence"
+          : this.score < 130
+          ? "Intellect above average"
+          : "High level of intelligence";
+    },
+  },
+};
 </script>
 
 <style lang="scss">
