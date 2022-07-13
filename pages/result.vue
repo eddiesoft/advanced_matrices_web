@@ -40,10 +40,22 @@ export default {
       answersList: 'test/answersList',
     }),
   },
+  head() {
+    return {
+      title: 'Result page title',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Result page description'
+        }
+      ]
+    }
+  },
   created() {
     const answersListCopy = [...this.answersList];
     const falseListCopy = [...this.falseList];
-    
+
     let isEqual = answersListCopy.sort().toString() == falseListCopy.sort().toString();
     if (isEqual) {
       this.$router.push('/')
