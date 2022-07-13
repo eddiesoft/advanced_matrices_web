@@ -5,7 +5,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/eddiesoft/'
+    base: '/advanced_matrices_web/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
