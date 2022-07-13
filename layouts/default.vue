@@ -12,15 +12,17 @@
       <v-toolbar-title>Raven's Advanced Progressive Matrices</v-toolbar-title>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <div class="wrapper">
+        <v-container>
+          <Nuxt />
+        </v-container>
+      </div>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "DefaultLayout",
@@ -39,4 +41,7 @@ export default {
 </script>
 
 <style lang="scss">
+.wrapper {
+  min-height: 100vh;
+}
 </style>
