@@ -18,11 +18,11 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'DefaultLayout',
-      ...mapActions({
+  methods: {
+    ...mapActions({
       clearAppCorWrongLists: 'test/clearAppCorWrongLists',
       clearAnswersList: 'test/clearAnswersList',
     }),
-  methods: {
     clickLogo() {
       this.clearAnswersList();
       this.clearAppCorWrongLists();
