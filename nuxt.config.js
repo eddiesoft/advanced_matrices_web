@@ -20,6 +20,11 @@ export default {
       { hid: 'description', name: 'description', content: 'Raven\'s Advanced Progressive Matrices is a highly trusted cognitive assessment that helps to measure an individual’s level of general ability by specifically assessing non-verbal abstract reasoning skills that are required for success in many job roles or training courses through the use of abstract reasoning tests' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
+    script: [
+      {
+        src: 'https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js'
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
