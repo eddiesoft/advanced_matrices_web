@@ -14,10 +14,18 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   name: 'DefaultLayout',
+      ...mapActions({
+      clearAppCorWrongLists: 'test/clearAppCorWrongLists',
+      clearAnswersList: 'test/clearAnswersList',
+    }),
   methods: {
     clickLogo() {
+      this.clearAnswersList();
+      this.clearAppCorWrongLists();
       this.$router.push('/');
     }
   }
