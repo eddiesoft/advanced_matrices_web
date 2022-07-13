@@ -14,9 +14,9 @@
         </v-img>
         <div class="mask-container">
           <div v-for="num in 8" :class="classAssign(num)">
-            <v-img v-if="wrongList[currentItem] + 1 == num" :src="require('~/images/cross.png')">
+            <v-img v-if="wrongList[currentItem] + 1 == num" :src="require('/advanced_matrices_web/images/cross.png')">
             </v-img>
-            <v-img v-if="correctList[currentItem] + 1 == num" :src="require('~/images/checkmark.png')">
+            <v-img v-if="correctList[currentItem] + 1 == num" :src="require('/advanced_matrices_web/images/checkmark.png')">
             </v-img>
           </div>
         </div>
@@ -139,9 +139,9 @@ export default {
   methods: {
     getImgUrl(imagePath, isQuestion) {
       if (isQuestion) {
-        return require('~/images/question-images/' + imagePath);
+        return require('/advanced_matrices_web/images/question-images/' + imagePath);
       }
-      return require('~/images/answer-images/' + imagePath);
+      return require('/advanced_matrices_web/images/answer-images/' + imagePath);
     },
     classAssign(num) {
       if (num == 1 || num == 2 || num == 5 || num == 6) {

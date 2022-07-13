@@ -123,9 +123,9 @@ export default {
     }),
     getImgUrl(imagePath, isQuestion) {
       if (isQuestion) {
-        return require('~/images/question-images/' + imagePath);
+        return require('/advanced_matrices_web/images/question-images/' + imagePath);
       }
-      return require('~/images/answer-images/' + imagePath);
+      return require('/advanced_matrices_web/images/answer-images/' + imagePath);
     },
     selectOption(selectedOption) {
       if (this.currentItem == 1) this.clearAnswersList();
