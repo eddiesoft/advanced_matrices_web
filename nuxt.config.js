@@ -27,7 +27,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon-16x16.png' },
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'
