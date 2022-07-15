@@ -10,7 +10,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Raven\'s Advanced Progressive Matrices | IQ Test',
+    title: 'Raven\'s Advanced Progressive Matrices | IQ Test Online Free',
     htmlAttrs: {
       lang: 'en'
     },
