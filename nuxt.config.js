@@ -57,6 +57,9 @@ export default {
   modules: [
     '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    hostname: 'https://eddiesoft.github.io/advanced_matrices_web/',
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
