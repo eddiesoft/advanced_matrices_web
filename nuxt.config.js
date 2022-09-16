@@ -4,9 +4,9 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  router: {
-    base: '/advanced_matrices_web/'
-  },
+  // router: {
+  //   base: '/advanced_matrices_web/'
+  // },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
