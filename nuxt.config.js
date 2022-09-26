@@ -62,7 +62,9 @@ export default {
     hostname: 'https://eddiesoft.github.io/advanced_matrices_web/',
     gzip: true,
     exclude: [
-      '/**',
+      '/test',
+      '/result',
+      '/mistakes', 
     ],
   },
 
