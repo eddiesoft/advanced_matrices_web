@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "gendep": "yarn generate && yarn deploy"
+    "commitdeploy": "git add . && git commit -m \"deploy\" && git push origin main && yarn generate && yarn deploy"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^2.4.0",

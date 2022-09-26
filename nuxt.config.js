@@ -60,6 +60,10 @@ export default {
   ],
   sitemap: {
     hostname: 'https://eddiesoft.github.io/advanced_matrices_web/',
+    gzip: true,
+    exclude: [
+      '/**',
+    ],
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
