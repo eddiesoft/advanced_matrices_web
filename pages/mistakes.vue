@@ -20,12 +20,12 @@
           <div v-for="num in 8" :key="num" :class="classAssign(num)">
             <v-img
               v-if="wrongList[currentItem] + 1 == num"
-              :src="require('~/images/cross.png')"
+              :src="require('~/assets/images/cross.png')"
             >
             </v-img>
             <v-img
               v-if="correctList[currentItem] + 1 == num"
-              :src="require('~/images/checkmark.png')"
+              :src="require('~/assets/images/checkmark.png')"
             >
             </v-img>
           </div>
@@ -158,9 +158,9 @@ export default {
   methods: {
     getImgUrl(imagePath, isQuestion) {
       if (isQuestion) {
-        return require("~/images/question-images/" + imagePath);
+        return require("~/assets/images/question-images/" + imagePath);
       }
-      return require("~/images/answer-images/" + imagePath);
+      return require("~/assets/images/answer-images/" + imagePath);
     },
     classAssign(num) {
       if (num == 1 || num == 2 || num == 5 || num == 6) {

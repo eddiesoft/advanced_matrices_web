@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app elevation="5">
       <v-img
-        :src="require('~/images/logo.png')"
+        :src="require('~/assets/images/logo.png')"
         class="mr-4"
         max-height="40"
         max-width="40"

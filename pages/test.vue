@@ -121,9 +121,9 @@ export default {
     }),
     getImgUrl(imagePath, isQuestion) {
       if (isQuestion) {
-        return require("~/images/question-images/" + imagePath);
+        return require("~/assets/images/question-images/" + imagePath);
       }
-      return require("~/images/answer-images/" + imagePath);
+      return require("~/assets/images/answer-images/" + imagePath);
     },
     selectOption(selectedOption) {
       if (this.currentItem == 1) this.clearAnswersList();
